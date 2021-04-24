@@ -1,0 +1,386 @@
+@charset "utf-8";
+/*
+Theme Name: wp-theme02
+*/
+
+/* 共通 */
+body {
+  line-height: 1.8rem;
+  font-family: sans-serif;
+  color: #707070;
+  background-color: #f5f5f5;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (min-width: 760px) {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.pc {
+  display: none;
+}
+
+@media screen and (min-width: 760px) {
+  .pc {
+    display: block;
+  }
+}
+
+/* ヘッダー */
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: white;
+}
+
+.header-logo {
+  display: inline-block;
+  width: 180px;
+}
+
+.header__nav {
+  margin-top: 20px;
+}
+
+.header__nav-items {
+  justify-content: center;
+}
+
+.header__nav-list:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* ファーストビュー */
+.firstview {
+  background: url(./img/media__firstview-sp.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 570px;
+  position: relative;
+  text-align: center;
+}
+
+.firstview__ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
+  color: white;
+  line-height: 1.8em;
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .firstview {
+    background: url(./img/media__firstview.png) no-repeat;
+    background-size: cover;
+    height: 400px;
+  }
+  .firstview__ttl {
+    font-family: "Indie Flower", cursive;
+    font-size: 3.5rem;
+    color: white;
+    line-height: 1.8em;
+  }
+}
+
+/* 新着記事 */
+.container {
+  padding: 70px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.new-article__ttl {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.new-article__sub-ttl {
+  font-family: "Indie Flower", cursive;
+  color: #c50065;
+}
+
+@media screen and (min-width: 760px) {
+  .article__item-list-container {
+    width: 65%;
+  }
+}
+
+.article__card {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 760px) {
+  .article__card {
+    width: 30%;
+    margin: 0 0 30px;
+  }
+}
+
+.article__item-list-container {
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 760px) {
+  .article__item-list-container {
+    padding-bottom: unset;
+  }
+}
+
+.article__card-img img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.article__cat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #c50065;
+  color: white;
+  padding: 5px 15px;
+}
+
+.article__card-txt {
+  padding: 10px 15px 5px;
+  background-color: white;
+}
+
+.article__card-ttl {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.article__card-date {
+  font-size: smaller;
+}
+
+/* サイドバー */
+.sidebar {
+  padding-top: 40px;
+  border-top: 1px solid lightgray;
+}
+
+@media screen and (min-width: 760px) {
+  .sidebar {
+    width: 30%;
+    padding-top: unset;
+    border: none;
+  }
+}
+
+.side-banner {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* サイドバー・プロフィール */
+.side-profile {
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  margin: 30px 0;
+}
+
+.profile__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #c50065;
+  display: flex;
+  align-items: center;
+}
+
+.profile__ttl {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* サイドバー・カテゴリー */
+.category {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+
+.category ul {
+  list-style: none;
+}
+
+.category__ttl {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.category__list {
+  padding: 10px 0;
+  border-bottom: 1px solid #fbfbfb;
+  position: relative;
+}
+
+.category__list::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 88%;
+  background: url(./img/arrow.svg) no-repeat;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.category__link {
+  display: block;
+}
+
+/* フッター */
+.footer {
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  background-color: white;
+  font-size: smaller;
+}
+
+/* カテゴリー */
+.firstview--cat {
+  background-color: #c50065;
+  height: 300px;
+  position: relative;
+  text-align: center;
+}
+
+.firstview__ttl--cat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Indie Flower", cursive;
+  font-size: 3.5rem;
+  color: white;
+  line-height: 1.8em;
+}
+
+@media screen and (min-width: 760px) {
+  .firstview--cat {
+    height: 200px;
+  }
+}
+
+/* シングルページ */
+.container--single {
+  max-width: 800px;
+  width: 90%;
+  padding: 20px 0 0;
+  margin: 60px auto;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.container--single h2,
+h3,
+h4 {
+  line-height: 1.7;
+}
+
+.article__cat--single {
+  background-color: #c50065;
+  border-radius: 30px;
+  color: white;
+  padding: 5px 20px;
+}
+
+.article__card-ttl--single {
+  font-size: 1.5rem;
+  margin: 40px 0;
+}
+
+.article__item-ttls {
+  padding: 20px 20px 40px;
+}
+
+.article__card-txt--single {
+  padding: 40px 20px;
+}
+
+.article__card-img--single {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.article__card-txt--single p {
+  margin-bottom: 20px;
+}
+
+.article__card-txt--single h2,
+h3,
+h4 {
+  margin: 25px 0;
+}
+
+.article__card-txt--single h2 {
+  font-size: 1.3rem;
+}
+
+.article__card-txt--single h3 {
+  font-size: 1.2rem;
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.article__card-txt--single h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #c50065;
+  width: 10px;
+  height: 100%;
+}
+
+.article__card-txt--single h4 {
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 760px) {
+  .article__card-ttl--single {
+    font-size: 2rem;
+  }
+  .article__card-txt--single h2 {
+    font-size: 1.7rem;
+  }
+  .article__card-txt--single h3 {
+    font-size: 1.4rem;
+  }
+  .article__card-txt--single h4 {
+    font-size: 1.2rem;
+  }
+}
